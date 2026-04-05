@@ -1,0 +1,23 @@
+{
+	"model": "lstm",
+	"experiment_id": "conditioning",
+	"dataset_name": "OD",
+	"data_dir": "data/dataset/audio-effects-datasets-vol-1",
+	"embedding_dim": 0,
+	"use_multiband": false,
+	"predict_feature": false,
+    "features": [null, "peak", "spectral_flux", "pitch", "envelope", "spectral_flatness", "entropy", "crest", "flatness", "zero_crossing_rate"],
+    "conditioning_types": ["FiLM"],
+	"extractor": "essentia",
+	"samplerate": 48000,
+	"epochs": 1,
+	"seq_len": [2048],
+	"hidden_size": 32,
+	"input_size": 1,
+	"order": 1,
+	"loss": ["MAE"],
+	"learning_rate": 1e-4,
+    "from_scratch": true,
+    "lim_for_testing": false,
+    "extract_in_loading": false
+}
